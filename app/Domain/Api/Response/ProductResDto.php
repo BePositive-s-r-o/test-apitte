@@ -16,6 +16,7 @@ class ProductResDto
 	public int $price;
 	public string $ean;
 
+    //nice to have static (body navíc)
 	public function fromEntity(Product $product): self
 	{
 		$this->id = $product->getId();

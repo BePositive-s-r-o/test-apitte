@@ -13,6 +13,7 @@ use App\Model\Exception\Runtime\Database\EntityNotFoundException;
 
 class ProductsFacade extends AbstractFacade
 {
+    //nice to have annotation of array type (body navíc)
 	/**
 	 * @return array<int,ProductResDto>
 	 */
@@ -36,6 +37,7 @@ class ProductsFacade extends AbstractFacade
 	{
 		$customer = $this->entityManager->getRepository(Product::class)->findOneBy(['id' => $id]);
 
+        //Close to must have validation with exception
 		if ($customer === null) {
 			throw new EntityNotFoundException();
 		}
@@ -45,6 +47,7 @@ class ProductsFacade extends AbstractFacade
 
 	public function create(CreateProductReqDto $createProductReqDto): Product
 	{
+        //nice to have static create Product (body navíc)
 		$product = new Product();
 		$product->setName($createProductReqDto->name);
 		$product->setEan($createProductReqDto->ean);

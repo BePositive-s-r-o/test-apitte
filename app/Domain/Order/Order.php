@@ -20,6 +20,7 @@ use Doctrine\ORM\Mapping\Table;
 #[Table(name: 'orders')]
 class Order extends AbstractEntity
 {
+    //using traits nice to have ( body navíc )
 	use TId;
 	use TCreatedAt;
 	use TUpdatedAt;

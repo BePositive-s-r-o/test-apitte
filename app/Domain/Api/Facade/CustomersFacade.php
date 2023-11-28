@@ -34,6 +34,7 @@ class CustomersFacade extends AbstractFacade
 	{
 		$customer = $this->entityManager->getRepository(Customer::class)->findOneBy(['id' => $id]);
 
+        //Close to must have validation with exception
 		if ($customer === null) {
 			throw new EntityNotFoundException();
 		}
@@ -43,6 +44,7 @@ class CustomersFacade extends AbstractFacade
 
 	public function create(CreateCustomerReqDto $customerResDto): Customer
 	{
+        //nice to have static create customer (body navíc)
 		$customer = new Customer();
 		$customer->setName($customerResDto->name);
 		$customer->setSurname($customerResDto->surname);

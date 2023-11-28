@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 final class CreateCustomerReqDto
 {
-
+    //close to must have annotation with assert (body navíc)
 	/**
 	 * @Assert\NotNull(message="Email is required.")
 	 *

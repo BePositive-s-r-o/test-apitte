@@ -14,10 +14,12 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
 class Product extends AbstractEntity
 {
+    //using traits nice to have ( body navíc )
 	use TId;
 	use TCreatedAt;
 	use TUpdatedAt;
 
+    //using type constants nice to have ( body navíc )
 	#[ORM\Column(type: Types::STRING, length: 255)]
 	private string $name;
 

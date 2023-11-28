@@ -27,10 +27,13 @@ use Nette\Http\IResponse;
 class CustomersController extends BasePubV1Controller
 {
 
+    //must have using Facade
 	public function __construct(private readonly CustomersFacade $customersFacade)
 	{
 	}
 
+    //close to must have annotation response body (body navíc)
+    //method name is not good shoud be list, findAll, etc. (body navíc)
 	/**
 	 * @Path("/")
 	 * @Method("GET")
@@ -44,6 +47,8 @@ class CustomersController extends BasePubV1Controller
 			->withStatus(ApiResponse::S200_OK);
 	}
 
+    //close to must have annotation response body (body navíc)
+    //close to must have throwing exception (body navíc)
 	/**
 	 * @OpenApi("
 	 *   summary: Get customer by id.
@@ -62,6 +67,7 @@ class CustomersController extends BasePubV1Controller
 		}
 	}
 
+    //close to must have annotation response body (body navíc)
 	/**
 	 * @OpenApi("
 	 *   summary: Create new customer.

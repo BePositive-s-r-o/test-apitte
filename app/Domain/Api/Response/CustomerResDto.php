@@ -17,6 +17,7 @@ class CustomerResDto
 	public DateTimeImmutable $createdAt;
 	public ?DateTimeImmutable $updatedAt;
 
+    //nice to have static (body navíc)
 	public function fromEntity(Customer $customer): self
 	{
 		$this->id = $customer->getId();

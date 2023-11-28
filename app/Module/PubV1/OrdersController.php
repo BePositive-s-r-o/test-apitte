@@ -19,9 +19,12 @@ use App\Domain\Api\Facade\OrdersFacade;
 class OrdersController extends BasePubV1Controller
 {
 
+    //must have using Facade
 	public function __construct(private readonly OrdersFacade $orderFacade)
 	{}
 
+    //close to must have annotation response body (body navíc)
+    //method name is not good shoud be list, findAll, etc. (body navíc)
 	/**
 	 * @Path("/")
 	 * @Method("GET")

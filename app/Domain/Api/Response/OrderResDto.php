@@ -16,6 +16,7 @@ class OrderResDto
 	public int $productId;
 	public int $price;
 
+    //nice to have static (body navíc)
 	public function fromEntity(Order $order): self
 	{
 		$this->id = $order->getId();
